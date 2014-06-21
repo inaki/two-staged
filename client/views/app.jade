@@ -1,0 +1,28 @@
+!!! 5
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    != SocketStream
+    title Welcome
+    script(src="http://code.jquery.com/jquery-migrate-1.2.1.min.js")
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/two.js/0.3.0/two.min.js")
+
+
+
+  body
+    #content
+      // QUICK CHAT DEMO
+    #circle
+
+script
+
+    var elem = document.getElementById('circle');
+    var params = { width: 500, height: 500};
+    var two = new Two(params).appendTo(elem);
+
+    var circle = two.makeCircle(two.width/2, two.width/2, 100);
+    circle.fill = "blue";
+    circle.noStroke();
+
+
+    two.update();
