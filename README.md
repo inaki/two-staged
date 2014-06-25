@@ -34,4 +34,10 @@ start playing with [Two.Js](http://jonobr1.github.io/two.js/).
 
   `npm start`
 
+6. The path for the view you have to edit to play with two.js is:
+
+  `/client/views/app.jade`
+
+
+
 ### Happy coding!

@@ -3,8 +3,7 @@ html(lang="en")
   head
     meta(charset="utf-8")
     != SocketStream
-    title Welcome
-    script(src="http://code.jquery.com/jquery-migrate-1.2.1.min.js")
+    title Two Staged
     script(src="http://cdnjs.cloudflare.com/ajax/libs/two.js/0.3.0/two.min.js")
 
 
@@ -12,17 +11,20 @@ html(lang="en")
   body
     #content
       // QUICK CHAT DEMO
-    #circle
+    #stage
 
 script
 
-    var elem = document.getElementById('circle');
+    var elem = document.getElementById('stage');
     var params = { width: 500, height: 500};
     var two = new Two(params).appendTo(elem);
 
     var circle = two.makeCircle(two.width/2, two.width/2, 100);
-    circle.fill = "#3DBDAE";
+    circle.fill = "#881111";
     circle.noStroke();
 
+    var dot = two.makeLine(10, 10, 10, 10);
+    dot.fill = "#881111";
+    dot.linewidth = 2;
 
     two.update();
